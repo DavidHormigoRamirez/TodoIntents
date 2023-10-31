@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ToDo</string>
+    <string name="titulo_hint">Título</string>
+    <string name="descripcion_hit">Descripción</string>
+    <string name="create_task_button_text">Crear</string>
+    <string name="cancel_task_button_text">Cancelar</string>
+    <string name="crear_tarea_btn_label">Crear tarea</string>
+    <string name="task_status_switch_label">Completada</string>
 </resources>
