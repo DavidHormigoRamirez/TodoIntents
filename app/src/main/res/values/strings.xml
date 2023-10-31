@@ -6,4 +6,5 @@
     <string name="cancel_task_button_text">Cancelar</string>
     <string name="crear_tarea_btn_label">Crear tarea</string>
     <string name="task_status_switch_label">Completada</string>
+    <string name="btn_cancel">Cancelar</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.alanturing.cpifp.todo
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.alanturing.cpifp.todo.data.TaskLocalRepository
@@ -19,6 +20,11 @@ class CreateTodoActivity : AppCompatActivity() {
                 binding.descriptionInput.text.toString(),
                 false)
             repository.add(task)
+            setResult(Activity.RESULT_OK)
+            finish()
+        }
+        binding.buttonCancel.setOnClickListener {
+            setResult(Activity.RESULT_CANCELED)
             finish()
         }
     }
