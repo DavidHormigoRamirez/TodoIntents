@@ -7,4 +7,7 @@
     <string name="crear_tarea_btn_label">Crear tarea</string>
     <string name="task_status_switch_label">Completada</string>
     <string name="btn_cancel">Cancelar</string>
+    <string name="share_text">La tarea con %1s - %2s esta pendiente</string>
+    <string name="btn_edit_label">Editar</string>
+    <string name="btn_share_label">Compartir</string>
 </resources>
