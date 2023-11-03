@@ -4,47 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".ui.CreateTodoActivity">
-
+    tools:context=".ui.EditTodoActivity"
+    android:padding="16dp">
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/title_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/titulo_hint"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/title_input"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/description_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginVertical="8dp"
         android:hint="@string/descripcion_hit"
-        app:layout_constraintStart_toStartOf="@id/title_label"
-        app:layout_constraintTop_toBottomOf="@id/title_label">
-
+        app:layout_constraintTop_toBottomOf="@id/title_label"
+        app:layout_constraintStart_toStartOf="@id/title_label">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/description_input"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
-
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/status_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="@string/task_status_switch_label"
+        app:layout_constraintStart_toStartOf="@id/description_label"
+        app:layout_constraintTop_toBottomOf="@id/description_label"/>
     <Button
-        android:id="@+id/button_create"
+        android:id="@+id/button_update"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/create_task_button_text"
+        android:layout_marginVertical="8dp"
+        android:text="@string/update_task_button_text"
         app:layout_constraintEnd_toStartOf="@id/button_cancel"
-        app:layout_constraintTop_toBottomOf="@id/description_label" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_checkbox" />
 
     <Button
         android:id="@+id/button_cancel"
@@ -54,7 +57,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/btn_cancel"
         app:layout_constraintEnd_toEndOf="@id/description_label"
-        app:layout_constraintTop_toBottomOf="@id/description_label" />
-
+        app:layout_constraintStart_toEndOf="@id/button_update"
+        app:layout_constraintTop_toBottomOf="@id/status_checkbox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@ import com.alanturing.cpifp.todo.databinding.TodoItemBinding
 import com.alanturing.cpifp.todo.model.Task
 
 class TasksAdapter(private val repository: TaskLocalRepository,
-    private val onShareTask:(t:Task,v: View)->Unit): RecyclerView.Adapter<TasksAdapter.TaskViewHolder>() {
+    private val shareTask:(t:Task,v: View)->Unit,
+    private val editTask:(t:Task)->Unit): RecyclerView.Adapter<TasksAdapter.TaskViewHolder>() {
     inner class TaskViewHolder(private val binding: TodoItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bindTask(t: Task) {
@@ -17,7 +18,10 @@ class TasksAdapter(private val repository: TaskLocalRepository,
             binding.description.text = t.description
             binding.isCompleted.isChecked = t.isCompleted
             binding.btnShare.setOnClickListener {
-                onShareTask(t,it)
+                shareTask(t,it)
+            }
+            binding.btnEdit.setOnClickListener {
+                editTask(t)
             }
         }
     }

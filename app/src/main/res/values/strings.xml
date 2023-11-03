@@ -10,4 +10,5 @@
     <string name="share_text">La tarea con %1s - %2s esta pendiente</string>
     <string name="btn_edit_label">Editar</string>
     <string name="btn_share_label">Compartir</string>
+    <string name="update_task_button_text">Actualizar</string>
 </resources>

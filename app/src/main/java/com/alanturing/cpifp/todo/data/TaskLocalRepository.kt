@@ -23,7 +23,12 @@ class TaskLocalRepository() {
         TODO("Código eliminar tarea por id")
     }
     fun update(task:Task) {
-        TODO("Código actualizar tarea con id==id")
+        val oldTask:Task? = _tasks.find { t -> t.id == task.id }
+        oldTask?.apply {
+            description = task.description
+            title = task.title
+            isCompleted = task.isCompleted
+        }
     }
 
     fun getNextId() = ++taskIdCounter

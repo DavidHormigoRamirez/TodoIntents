@@ -1,4 +1,4 @@
-package com.alanturing.cpifp.todo
+package com.alanturing.cpifp.todo.ui
 
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
