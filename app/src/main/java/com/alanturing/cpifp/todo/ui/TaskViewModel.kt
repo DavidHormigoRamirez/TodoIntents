@@ -8,24 +8,27 @@ import com.alanturing.cpifp.todo.model.Task
 
 class TaskViewModel(): ViewModel() {
     private val repository = TaskLocalRepository.getInstance()
-    private val _data :MutableLiveData<List<Task>> = MutableLiveData()
-    val data: LiveData<List<Task>>
+    private val _data:MutableLiveData<List<Task>> = MutableLiveData()
+    val data:LiveData<List<Task>>
         get() = _data
+
     init {
         fetchTasks()
-    }
-    private fun fetchTasks() {
-        _data.setValue(repository.tasks)
     }
 
     fun add(task: Task) {
         repository.add(task)
-        val mut = mutableListOf<Task>()
-        mut.add(Task(200,"Roto","Rotisimo",false))
-        _data.setValue(mut)
-        //fetchTasks()
+        fetchTasks()
+    }
 
+    fun update(task: Task) {
+        repository.update(task)
+        fetchTasks()
     }
 
     fun getNextTaskId() = repository.getNextTaskId()
+
+    fun fetchTasks() {
+        _data.value = repository.tasks
+    }
 }

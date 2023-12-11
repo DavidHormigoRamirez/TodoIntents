@@ -15,6 +15,7 @@ class TaskLocalRepository() {
     private var contador:Int = 0
     private val _tasks = mutableListOf<Task>()
 
+
     val tasks:List<Task>
         get() = _tasks
 
@@ -25,11 +26,8 @@ class TaskLocalRepository() {
         TODO("Código eliminar tarea por id")
     }
     fun update(task:Task) {
-        //TODO("Código actualizar tarea con id==id")
-        _tasks[_tasks.indexOfFirst { t->t.id == task.id }] = task
+       _tasks[_tasks.indexOfFirst { t -> t.id == task.id }] = task
     }
-    fun getNextTaskId(): Int {
-        return ++contador
 
-    }
+    fun getNextTaskId() = ++contador
 }

@@ -10,10 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        app:title="Crear tarea"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:navigationIcon="@drawable/ic_close"/>
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+        app:title="Editar tarea"
+        tools:ignore="MissingConstraints" />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/title_label"
         android:layout_width="match_parent"
@@ -40,4 +39,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
